@@ -1,0 +1,66 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: zzy's site
+
+theme: hextra
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+hasCJKLanguage: true
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: Hextra
+  zh-cn:
+    languageName: 简体中文
+    languageCode: zh-CN
+    weight: 2
+    title: Hextra
+
+# Markdown 配置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+# 横栏菜单
+menu:
+  main:
+#    - name: Docs
+#      pageRef: /docs
+#      weight: 1
+    - name: Blog
+      pageRef: /blog
+      weight: 2
+    - name: Project
+      pageRef: /project
+      weight: 3
+    - name: About
+      pageRef: /about
+      weight: 4
+    - name: Search
+      weight: 5
+      params:
+        type: search
+#    - name: GitHub
+#      weight: 5
+#      url: "https://github.com/imfing/hextra"
+#      params:
+#        icon: github
+  sidebar:
+    - name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "About"
+      pageRef: "/about"
+      weight: 2
+    - name: "Hugo Docs ↗"
+      url: "https://gohugo.io/documentation/"
+      weight: 3
